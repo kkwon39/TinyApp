@@ -1,17 +1,21 @@
-<h1>Tiny App</h1>
+<!DOCTYPE html>
+<html>
+  <body style = "text-align: center">
+    <h1>Tiny App</h1>
 
 
-<%if(user){ %>
-Logged in as: <%= user.email %>
-<form method="POST" action="/logout">
-  <button type="submit">logout</button>
+      <%if(user){ %>
+    Logged in as: <%= user.email %>
+    <form method="POST" action="/logout">
+      <button type="submit">logout</button>
+       <% } else{%>
+      <a href='register'>Register</a>
+      <a href='login'>Login</a>
+      <%}%>
+    </form>
 
-<% } else{%>
-  <a href='register'>Register</a>
-  <a href='login'>Login</a>
-  <%}%>
-</form>
-
+  </body>
+</html>
 
 
 

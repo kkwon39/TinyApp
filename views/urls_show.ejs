@@ -2,13 +2,13 @@
 
 <!DOCTYPE html>
 <html lang="en">
-<head>
+<head style = "text-align: center">
   <title>TinyApp</title>
 </head>
-<body>
+<body style = "text-align: center">
   <ul>
    <h2><strong></strong>Short URL:<%=shortURL%></strong></h2>
-   <form method="POST" action="/urls/<%=shortURL%>">
+   <form method="POST" action="/urls/<%=shortURL%>?_method=PUT">
       <input type="text" name="long_URL" placeholder="Type in URL">
       <button type="submit">Update</button>
    </form>

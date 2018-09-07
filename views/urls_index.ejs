@@ -2,22 +2,22 @@
 
 <!DOCTYPE html>
 <html lang="en">
-<head>
+<head style = "text-align: center">
   <title>TinyApp</title>
 </head>
-<body>
-  <ul>
+<body style = "text-align: center">
+
 
    <%  for (let shortURL in urls){  %>
-    <li><%= shortURL %></li>
-    <li><%=urls[shortURL]%></li>
-    <form method="POST" action="/urls/<%= shortURL %>/delete">
+    <div style="margin:10px;"><%= shortURL %></div>
+    <div><%=urls[shortURL].longURL%></div>
+    <form method="POST" action="/urls/<%= shortURL %>?_method=DELETE"">
       <button>Delete</button>
       <a href='/urls/<%=shortURL%>'>Edit</a>
     </form>
     <%  } %>
-  </ul>
-  <a href = "/urls">Home</a>
+
+  <a href = "/urls" style="margin:10px;">Home</a>
   <a href = "/urls/new">Add New URL</a>
 
 
