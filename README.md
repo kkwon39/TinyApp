@@ -1,5 +1,5 @@
 # TinyApp Project
-
+A web app built using Node and Express. This app will allow users to shorten long URLs much like TinyURL.com and bit.ly do.
 
 ## Dependecies
 
